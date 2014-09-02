@@ -1,4 +1,4 @@
 collabcamp.github.io
 ====================
 
-Collab camp home page
+CollabCamp home page
