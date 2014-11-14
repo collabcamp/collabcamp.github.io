@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "Landing page for TransforMap",
   "homepage": "http://transformap.co",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/TransforMap/transformap.github.io.git"
-},
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/TransforMap/transformap.github.io.git"
+  },
   "engines": {
     "node": "0.10",
     "npm": "1.4"
