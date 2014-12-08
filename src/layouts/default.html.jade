@@ -1,7 +1,7 @@
-- var scripts = getBlock('scripts')
-- var styles = getBlock('styles')
+- var scripts = getBlock('scripts').add(["/files/js/jquery.min.js", "files/js/bootstrap.min.js"])
+- var styles = getBlock('styles').add(["files/css/bootstrap.min.css"]).add(["files/css/transformap.css"])
 
-// https://github.com/willianjusten/bootstrap-boilerplate/blob/master/src/templates/index.jade
+//- https://github.com/willianjusten/bootstrap-boilerplate/blob/master/src/templates/index.jade
 
 doctype html
 html
@@ -24,7 +24,7 @@ html
     meta(name="viewport", content="width=device-width")
 
     // Icons
-    link(rel="shortcut icon", href="/files/favicon.ico")
+    link(rel="shortcut icon", href="/files/favicon.ico?#{site.date.getTime()}")
     //- link(rel="apple-touch-icon-precomposed", sizes="144x144", href="/ico/apple-touch-icon-144-precomposed.png")
       link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/ico/apple-touch-icon-114-precomposed.png")
       link(rel="apple-touch-icon-precomposed", sizes="72x72", href="/ico/apple-touch-icon-72-precomposed.png")
@@ -34,11 +34,12 @@ html
       //if lt IE 9
       script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
       // Styles
+    // Styles
     != styles.toHTML()
 
   body
 
-    // Markup
+    // Navbar
     nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
@@ -49,11 +50,13 @@ html
           - clazz = (document.url === doc.url) ? 'active' : null
           li(typeof="sioc:Page", about=doc.url, class=clazz)
           a(href=doc.url, property="dc:title")= doc.title
-      .container
-        section#content.content!= content
-        hr
-        footer
-          div= site.copyright
+    // Main container
+    .container
+      section#content.content!= content
+    hr
+    // Footer
+    footer
+      div= site.copyright
       div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
 
     // Scripts
