@@ -7,32 +7,39 @@ Also consult `packages.json`.
 
 ### For static site generation w/ DocPad
 
-#### `docpad install` ...
+* `npm install --production`
+
+#### `docpad install`
+
+This will install the following modules:
 
 * `jade`
 * `livereload`
 * `ghpages`
 * (`stylus`) *not used yet*
 
-### For Favicon generation via Gulp
+### Developer dependencies
+
+#### Favicon generation via Gulp
 
 The initial idea and code for changing Favicons comes from [Federated Wiki](http://fed.wiki.org).
 Check the source!
 
-#### DocPad Package
+#### `docpad install`
 
 * `gulp`
 
-#### NPM Packages
+#### `npm install`
 
 * `-g gulp` && `gulp`
 * `gulp-file`
- * `mkdirp`
+* `mkdirp`
 * `canvas`
 
 #### Dependencies for `canvas`
 
 * Ubuntu : `apt-get install pkg-config libpng-dev libgif-dev libfreetype6-dev libpixman-1-dev libcairo2-dev libjpeg-dev`
+* [Fedora](https://github.com/Automattic/node-canvas/wiki/Installation---Fedora) : `yum install cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel`
 * OS X : https://github.com/Automattic/node-canvas
 
 ## Run

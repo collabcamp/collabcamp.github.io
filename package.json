@@ -1,23 +1,25 @@
 {
   "name": "TransforMap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Landing page for TransforMap",
   "homepage": "http://transformap.co",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/TransforMap/transformap.github.io.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TransforMap/transformap.github.io.git"
   },
   "engines": {
     "node": "0.10",
     "npm": "1.4"
   },
   "dependencies": {
+    "bootstrap": "^3.3.1",
     "docpad": "~6.69.1",
-    "docpad-plugin-ghpages": "~2.4.3",
     "docpad-plugin-gulp": "~2.1.5",
     "docpad-plugin-jade": "~2.8.0",
     "docpad-plugin-livereload": "~2.6.0",
-    "docpad-plugin-stylus": "~2.8.0"
+    "docpad-plugin-stylus": "~2.8.0",
+    "gulp": "^3.8.10",
+    "jquery": "^2.1.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
@@ -25,7 +27,8 @@
   },
   "devDependencies": {
     "canvas": "^1.1.6",
-    "gulp": "^3.8.10",
+    "docpad-plugin-ghpages": "~2.4.3",
+    "gulp-clean": "^0.3.1",
     "gulp-file": "^0.2.0",
     "mkdirp": "^0.5.0"
   }
