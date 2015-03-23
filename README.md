@@ -1,64 +1,89 @@
 # A TransforMap [DocPad](http://docpad.org) Project
 
-## Dependencies
+TransforMap aims at cartographing all alternative economies. [Read on the blog Why?](http://blog.14mmm.org/transformap-explained/)
 
-All commands have to be run within the root of the repository.
-Also consult `packages.json`.
+## Generating this site
 
-### For static site generation w/ DocPad
+### What you will need
 
-* `npm install --production`
+* A POSIX complaint Operating System that runs **Node.js**.
+* A **terminal** (console, command line, REPL) like `bash` which allows you to run commands by hand.
+If you are on Linux or Mac OS, you're most likely already equipped.
+* [`git`](http://git-scm.com/)
 
-#### `docpad install`
+Get started by opening such terminal and cloning this repository to your machine, i.e. by just copy-and-pasting the following commands.
 
-This will install the following modules:
+    git clone https://github.com/transformap/transformap.github.io.git ~/Repositories/github.com/transformap/transformap.github.io
 
-* `jade`
-* `livereload`
-* `ghpages`
-* (`stylus`) *not used yet*
+All following commands have to be run within the root of the repository. Change there with
 
-### Developer dependencies
+    cd ~/Repositories/github.com/transformap.github.io
 
-#### Favicon generation via Gulp
+Also make sure to have working `node` and `npm` executables within your `$PATH`.
+If `which node` and `which npm` don't show a thing for you, our best advice is to use [`nvm`](https://github.com/creationix/nvm#installation) for that.
 
-The initial idea and code for changing Favicons comes from [Federated Wiki](http://fed.wiki.org).
-Check the source!
+Also consult `packages.json` and the remaining source code for more details.
+Now there are two options for you to approach the code.
 
-#### `docpad install`
+### Requirements
 
-* `gulp`
+But before any, you also have to install `docpad` and `gulp` globally:
 
-#### `npm install`
+    npm install -g docpad gulp
 
-* `-g gulp` && `gulp`
-* `gulp-file`
-* `mkdirp`
-* `canvas`
+### Quick introduction for static hosting
 
-#### Dependencies for `canvas`
+If you don't trust the published output in the `master` branch, you can alter and recreate it yourself.
 
-* Ubuntu : `apt-get install pkg-config libpng-dev libgif-dev libfreetype6-dev libpixman-1-dev libcairo2-dev libjpeg-dev`
-* [Fedora](https://github.com/Automattic/node-canvas/wiki/Installation---Fedora) : `yum install cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel`
-* OS X : https://github.com/Automattic/node-canvas
+    npm install --production
 
-## Run
+will install all required `docpad` and `gulp` modules.
 
-> `docpad run` + http://localhost:9778
+Then
 
-## Future to copy from
+    docpad generate
 
-* [bootstrap jade boilerplate](https://github.com/willianjusten/bootstrap-boilerplate/blob/master/src/templates/index.jade)
-* [bootstrap 3 & jade](https://github.com/ALT-F1/bootstrap3-jade-node-express-grunt)
-* [docpad-bootstrap-jade](https://github.com/docpad/twitter-bootstrap-jade.docpad/blob/master/docpad.coffee) w/o livereload
+produces the website output in `./out`.
+Use your favourite webserver (i.e. `python -m SimpleHTTPServer`, [`nws`](https://npm.im/nws) or [`http-server`](https://npm.im/http-server)) and browser to display the results.
 
-### Farest Future?
+Subsequently running `gulp` independently recreates the static assetts in `./out/files/`
 
-* BEM
-* https://github.com/bevry/base
-* API via http://hapijs.com/ ?
+`gulp clean` or `rm -rf out` help you to get rid of the already generated, respective outputs.
 
-* Please see [Trello for more](https://trello.com/c/T2DOJr60/26-landing-page).
+### Development and Deployment
+
+If you intend to advance further, use the following procedure instead.
+
+#### Development
+
+You can install all requirements for `stylus`, `livereload` and `gh-pages` by issuing
+
+    npm install
+
+followed by (an equivalent to `docpad run`)
+
+    npm start
+
+Then browse to [http://localhost:9778](http://localhost:9778/) to see the result.
+Now try editing some files, it's fun to watch the live reloader!
+
+#### Deployment
+
+As of the [plugin's documentation](https://github.com/docpad/docpad-plugin-ghpages#project-pages), deploying to GitHub Pages is as easy as
+
+    docpad deploy-ghpages --env static
+
+You can then access the website under the domain specified in `./src/files/CNAME`.
+
+> *Note* This repository's `source` and `master` branch layout targets a [GitHub Pages](https://pages.github.com/) deployment for an [Organization Pages site](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/#how-github-pages-sites-use-custom-domains). Also see [User & Organization Pages](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages).
+
+### Contributing
+
+Please refer to our [Contributing Guidelines](LICENCE.md) for information about
+
+* **Collaboration via Pull Requests**
+* **Communication Channels** and our
+* **Ideas for the Future**
 
 ---
 
