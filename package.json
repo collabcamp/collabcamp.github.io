@@ -1,6 +1,6 @@
 {
   "name": "TransforMap",
-  "version": "0.0.2",
+  "version": "0.0.2a",
   "description": "Landing page for TransforMap",
   "homepage": "http://transformap.co",
   "repository": {
@@ -16,9 +16,8 @@
     "docpad": "~6.69.1",
     "docpad-plugin-gulp": "~2.1.5",
     "docpad-plugin-jade": "~2.8.0",
-    "docpad-plugin-livereload": "~2.6.0",
-    "docpad-plugin-stylus": "~2.8.0",
     "gulp": "^3.8.10",
+    "gulp-clean": "^0.3.1",
     "jquery": "^2.1.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
@@ -26,10 +25,8 @@
     "start": "node_modules/docpad/bin/docpad-server"
   },
   "devDependencies": {
-    "canvas": "^1.1.6",
     "docpad-plugin-ghpages": "~2.4.3",
-    "gulp-clean": "^0.3.1",
-    "gulp-file": "^0.2.0",
-    "mkdirp": "^0.5.0"
+    "docpad-plugin-livereload": "~2.6.0",
+    "docpad-plugin-stylus": "~2.8.0"
   }
 }
