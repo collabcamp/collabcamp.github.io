@@ -1,6 +1,11 @@
-# A TransforMap [DocPad](http://docpad.org) Project
+# [CollabCamp website](http://collab.camp/)
 
-TransforMap aims at cartographing all alternative economies. [Read on the blog Why?](http://blog.14mmm.org/transformap-explained/)
+using [DocPad](http://docpad.org)
+
+## Editing this site
+
+Work in progress. In the future, editors will be able to edit the site straight from the browser.
+
 
 ## Generating this site
 
