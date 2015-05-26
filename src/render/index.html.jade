@@ -6,5 +6,6 @@ layout: "default"
 .jumbotron.text-center
   h1= site.title
   p= getPreparedDescription()
-  iframe(width=560 height=315 src=site.video_url frameborder=0 allowfullscreen)
+  if site.video_url
+    iframe(width=560 height=315 src=site.video_url frameborder=0 allowfullscreen)
 
