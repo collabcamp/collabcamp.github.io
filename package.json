@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.1",
-    "docpad": "~6.69.1",
+    "docpad": "^6.78.1",
     "docpad-plugin-gulp": "~2.1.5",
     "docpad-plugin-jade": "~2.8.0",
+    "docpad-plugin-marked": "^2.3.0",
+    "docpad-plugin-partials": "^2.9.2",
     "font-awesome": "^4.3.0",
     "gulp": "^3.8.10",
     "gulp-clean": "^0.3.1",
