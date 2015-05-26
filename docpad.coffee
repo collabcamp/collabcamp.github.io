@@ -9,8 +9,8 @@ docpadConfig = {
 
 	plugins:
     ghpages:
-        deployRemote: 'origin'
-        deployBranch: 'master'
+      deployRemote: 'origin'
+      deployBranch: 'master'
 
 	templateData:
 		site:
@@ -19,6 +19,13 @@ docpadConfig = {
 			description: "CollabCamp events bring together social entrepreneurs, sharers, hackers, government officials and citizens to collaboratively work on projects which benefit the collaborative economy (sharing). CollabCamp events are free to attend. We celebrate collaboration and sharing. Let's get it done!"
 			keywords: "collaboration, sharing, openness, sharing economy, hacking, making the world a better place"
 			video_url: "https://www.youtube.com/embed/TH1DUUjjuGY"
+		social:
+			facebook: 'collabcamp'
+			twitter: 'collabcamps'
+			googleplus: 'collabcamp'
+			youtube: 'collabcamp'
+			github: 'collabcamp'
+			vine: 'collabcamp'
 
 		getPreparedTitle: ->
 			if @document.title
