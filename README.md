@@ -1,1 +1,1 @@
-Super Simple collabcamp page!
+Super Simple CollabCamp page!
