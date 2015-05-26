@@ -16,8 +16,9 @@ docpadConfig = {
 		site:
 			url: "http://collab.camp"
 			title: "CollabCamp"
-			description: "Uniting hackers, visionaries, entrepreneurs in taking a collective responsibility for our common future on this planet; celebrating collaboration and sharing; developing project concepts, code, graphics, documents and videos. Let's get it done!"
+			description: "CollabCamp events bring together social entrepreneurs, sharers, hackers, government officials and citizens to collaboratively work on projects which benefit the collaborative economy (sharing). CollabCamp events are free to attend. We celebrate collaboration and sharing. Let's get it done!"
 			keywords: "collaboration, sharing, openness, sharing economy, hacking, making the world a better place"
+      video_url: "https://www.youtube.com/embed/TH1DUUjjuGY"
 
 		getPreparedTitle: ->
 			if @document.title

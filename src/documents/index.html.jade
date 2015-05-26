@@ -1,8 +1,10 @@
 ---
-title: "TransforMap"
+title: "CollabCamp"
 layout: "default"
 ---
 
-h2 Headline
+.jumbotron.text-center
+  h1= site.title
+  p= getPreparedDescription()
+  iframe(width=560 height=315 src=site.video_url frameborder=0 allowfullscreen)
 
-section Another one bites the dust.

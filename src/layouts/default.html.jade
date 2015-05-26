@@ -40,7 +40,7 @@ html
   body
 
     // Navbar
-    nav.navbar.navbar-default.navbar-fixed-top
+    //-nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href="/") Welcome
@@ -53,11 +53,37 @@ html
     // Main container
     .container
       section#content.content!= content
-    hr
-    // Footer
-    footer
-      div= site.copyright
-      div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
+      hr
+      // Footer
+      footer
+        ul
+          li
+            a(href="https://www.facebook.com/collabcamp")
+              i.fa.fa-facebook
+              | Facebook
+          li
+            a(href="https://www.twitter.com/collabcamps")
+              i.fa.fa-twitter
+              | Twitter
+          li
+            a(href="https://plus.google.com/+collabcamp")
+              i.fa.fa-googleplus
+              | Google+
+          li
+            a(href="https://www.youtube.com/c/collabcamp")
+              i.icon-youtube
+              | YouTube
+          li
+            a(href="https://github.com/collabcamp")
+              i.icon-igithub
+              | Github
+
+          li
+            a(href="https://vine.co/tags/collabcamp")
+              i.icon-vine
+              | Vine
+
+        //- div(style="font-style:italic; font-size: 12px") Last updated at #{site.date}
 
     // Scripts
     != scripts.toHTML()
