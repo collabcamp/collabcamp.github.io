@@ -18,12 +18,18 @@ gulp.task('bootstrap-js', function() {
 });
 
 gulp.task('bootstrap-css', function() {
-  return gulp.src('node_modules/bootstrap/dist/css/*.min.css')
+  return gulp.src([
+      'node_modules/bootstrap/dist/css/*.min.css',
+      'node_modules/font-awesome/css/*.min.css'
+    ])
     .pipe(gulp.dest('out/files/css'));
 });
 
 gulp.task('bootstrap-fonts', function() {
-  return gulp.src('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.*')
+  return gulp.src([
+      'node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.*',
+      'node_modules/font-awesome/fonts/*'
+     ])
     .pipe(gulp.dest('out/files/fonts'));
 });
 

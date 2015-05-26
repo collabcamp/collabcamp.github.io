@@ -16,6 +16,7 @@
     "docpad": "~6.69.1",
     "docpad-plugin-gulp": "~2.1.5",
     "docpad-plugin-jade": "~2.8.0",
+    "font-awesome": "^4.3.0",
     "gulp": "^3.8.10",
     "gulp-clean": "^0.3.1",
     "jquery": "^2.1.1"
