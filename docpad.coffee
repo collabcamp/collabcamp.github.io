@@ -25,7 +25,7 @@ docpadConfig = {
 			googleplus: 'collabcamp'
 			youtube: 'collabcamp'
 			github: 'collabcamp'
-			vine: 'collabcamp'
+		hashtag: 'CollabCamp'
 
 		getPreparedTitle: ->
 			if @document.title

@@ -3,6 +3,7 @@ body {
 }
 
 .cc-jumbo h1 {
+  margin-top: 0;
   font-size: 52px;
   font-weight: bold;
 }
@@ -23,17 +24,20 @@ body {
 }
 
 
-ul.footer li {
-  display: inline-block;
-  margin: 0 0.45em;
+.footer {
+  text-align: center;
   color: #777;
 }
-ul.footer .fa {
-  margin-right: 5px;
-}
-ul.footer a {
+.footer a {
   color: #777;
 }
-ul.footer a:hover, ul.footer a:active {
+.footer a:hover, .footer a:active {
   color: #23527c;
+}
+.footer .fa {
+  margin: 0 5px;
+}
+.footer ul > li {
+  display: inline-block;
+  margin: 0 0.4em;
 }

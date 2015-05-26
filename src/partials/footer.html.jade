@@ -1,28 +1,41 @@
-ul.footer.footer-social
-  li
-    | We are on
-  if social.facebook
-    li
-      a(href='https://www.facebook.com/#{social.facebook}')
+.footer
+  if social
+    ul.footer-social
+      li
+        | We are on
+      if social.facebook
+        li
+          a(href='https://www.facebook.com/#{social.facebook}')
+            i.fa.fa-facebook
+            | Facebook
+      if social.twitter
+        li
+          a(href="https://www.twitter.com/#{social.twitter}")
+            i.fa.fa-twitter
+            | Twitter
+      if social.googleplus
+        li
+          a(href="https://plus.google.com/+#{social.googleplus}")
+            i.fa.fa-google-plus
+            | Google+
+      if social.youtube
+        li
+          a(href="https://www.youtube.com/c/#{social.youtube}")
+            i.fa.fa-youtube
+            | YouTube
+      if social.github
+        li
+          a(href="https://github.com/#{social.github}")
+            i.fa.fa-github
+            | GitHub
+
+  if hashtag
+    .footer-social
+      | Talk about <tt>##{hashtag}</tt> on
+      a(href="https://www.facebook.com/hashtag/#{hashtag}")
         i.fa.fa-facebook
-        | Facebook
-  if social.twitter
-    li
-      a(href="https://www.twitter.com/#{social.twitter}")
+      a(href="https://www.twitter.com/hashtag/#{hashtag}")
         i.fa.fa-twitter
-        | Twitter
-  if social.googleplus
-    li
-      a(href="https://plus.google.com/+#{social.googleplus}")
-        i.fa.fa-googleplus
-        | Google+
-  if social.youtube
-    li
-      a(href="https://www.youtube.com/c/#{social.youtube}")
-        i.fa.fa-youtube
-        | YouTube
-  if social.github
-    li
-      a(href="https://github.com/#{social.github}")
-        i.fa.fa-github
-        | GitHub
+      a(href="https://vine.co/tags/#{hashtag}")
+        i.fa.fa-vine
+
