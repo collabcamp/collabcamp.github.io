@@ -1,4 +1,39 @@
 body {
-    padding-top: 70px;
+  padding-top: 35px;
 }
 
+.cc-jumbo h1 {
+  font-size: 52px;
+  font-weight: bold;
+}
+.cc-jumbo p {
+  19px;
+}
+
+.cc-jumbo-left {
+  color: white;
+  background: #B87133;
+}
+.cc-jumbo-center {
+  text-align: center;
+}
+.cc-jumbo-right {
+  color: white;
+  background: #337AB7;
+}
+
+
+ul.footer li {
+  display: inline-block;
+  margin: 0 0.45em;
+  color: #777;
+}
+ul.footer .fa {
+  margin-right: 5px;
+}
+ul.footer a {
+  color: #777;
+}
+ul.footer a:hover, ul.footer a:active {
+  color: #23527c;
+}

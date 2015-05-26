@@ -3,9 +3,18 @@ title: "CollabCamp"
 layout: "default"
 ---
 
-.jumbotron.text-center
-  h1= site.title
-  p= getPreparedDescription()
-  if site.video_url
-    iframe(width=560 height=315 src=site.video_url frameborder=0 allowfullscreen)
+.row
+
+  .col-md-2
+  //- .col-md-2.jumbotron.cc-jumbo.cc-jumbo-left
+    | Hi there
+
+  .col-md-8.jumbotron.cc-jumbo.cc-jumbo-center
+    h1= site.title
+    p(style='margin-bottom: 1ex;')= getPreparedDescription()
+    if site.video_url
+      iframe(width=640 height=360 src=site.video_url frameborder=0 allowfullscreen)
+
+  //- .col-md-2.jumbotron.cc-jumbo.cc-jumbo-right
+    | Bye
 
