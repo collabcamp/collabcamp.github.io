@@ -1,0 +1,26 @@
+# Site settings
+title: CollabCamp
+keywords: "collaboration, sharing, openness, sharing economy, hacking, making the world a better place"
+description: > # this means to ignore newlines until the next key
+  CollabCamp events bring together social entrepreneurs, sharers, hackers,
+  government officials and citizens to collaboratively work on projects which
+  benefit the collaborative economy (sharing). CollabCamp events are free to
+  attend. We celebrate collaboration and sharing. Let's get it done!
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://collab.camp" # the base hostname & protocol for your site
+
+social:
+  facebook: collabcamp
+  twitter: collabcamps
+  googleplus: collabcamp
+  youtube: collabcamp
+  github: collabcamp
+hashtag: CollabCamp
+
+# Site Frontpage
+frontpage:
+  video_url: "https://youtube.com/embed/TH1DUUjjuGY"
+  #description: you may override the frontpage description here
+
+# Build settings
+markdown: kramdown

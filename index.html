@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="row">
+
+  <div class="col-md-2">
+  </div>
+
+  <div class="col-md-8 jumbotron cc-jumbo-middle">
+    <h1>{{ site.title }}</h1>
+    <p>{% if site.frontpage.description %}{{ site.frontpage.description }}{% else %}{{ site.description }}{% endif %}</p>
+    {% if site.frontpage.video_url %}
+      <iframe src="{{ site.frontpage.video_url }}" width=640 height=360 frameborder=0 allowfullscreen class="video"></iframe>
+    {% endif %}
+  </div>
+
+  <div class="col-md-2">
+  </div>
+
+</div>

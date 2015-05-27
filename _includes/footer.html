@@ -1,0 +1,70 @@
+<footer class="site-footer">
+  <div class="container">
+
+    {% if site.social %}
+    <ul class="footer-social">
+      <li>We are on</li>
+
+      {% if site.social.facebook %}
+      <li>
+        <a href="https://facebook.com/{{ site.social.facebook }}">
+          <i class="fa fa-facebook"></i> Facebook
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.social.twitter %}
+      <li>
+        <a href="https://twitter.com/{{ site.social.twitter }}">
+          <i class="fa fa-twitter"></i> Twitter
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.social.googleplus %}
+      <li>
+        <a href="https://plus.google.com/+{{ site.social.googleplus }}">
+          <i class="fa fa-google-plus"></i> Google+
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.social.youtube %}
+      <li>
+        <a href="https://youtube.com/c/{{ site.social.youtube }}">
+          <i class="fa fa-youtube"></i> YouTube
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.social.github %}
+      <li>
+        <a href="https://github.com/{{ site.social.github }}">
+          <i class="fa fa-github"></i> Github
+        </a>
+      </li>
+      {% endif %}
+
+    </ul>
+    {% endif %}
+
+    {% if site.hashtag %}
+    <div class="footer-social">
+      Talk about <tt>#{{ site.hashtag }}</tt> on
+
+      <a href="https://facebook.com/hashtag/{{ site.hashtag }}">
+        <i class="fa fa-facebook"></i>
+      </a>
+
+      <a href="https://twitter.com/hashtag/{{ site.hashtag }}">
+        <i class="fa fa-twitter"></i>
+      </a>
+
+      <a href="https://vine.co/tags/{{ site.hashtag }}">
+        <i class="fa fa-vine"></i>
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</footer>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% if false %} -- we don't use a header for now
+    {% include header.html %}
+    {% endif %}
+
+    <div class="container">
+      <section id="content" class="content">
+        {{ content }}
+      </section>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</html>

@@ -1,0 +1,51 @@
+
+// if no navbar, add some extra space
+body > .container:first-child {
+  padding-top: 35px;
+}
+
+.cc-jumbo {
+  h1 {
+    margin-top: 0;
+    font-size: 52px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 19px;
+  }
+}
+
+.cc-jumbo-left {
+  color: white;
+  background: #B87133;
+}
+.cc-jumbo-middle {
+  text-align: center;
+}
+.cc-jumbo-right {
+  color: white;
+  background: #337AB7;
+}
+
+
+.site-footer {
+  text-align: center;
+  color: #777;
+
+  a {
+    color: #777;
+  }
+
+  a:hover, a:active {
+    color: #23527c;
+  }
+
+  .fa {
+    margin: 0 5px;
+  }
+
+  ul > li {
+    display: inline-block;
+    margin: 0 0.4em;
+  }
+}
