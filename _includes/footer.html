@@ -13,6 +13,14 @@
       </li>
       {% endif %}
 
+      {% if site.social.facebook_group %}
+      <li>
+        <a href="https://facebook.com/groups/{{ site.social.facebook_group }}">
+          <i class="fa fa-facebook"></i> Facebook Group
+        </a>
+      </li>
+      {% endif %}
+
       {% if site.social.twitter %}
       <li>
         <a href="https://twitter.com/{{ site.social.twitter }}">

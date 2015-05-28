@@ -11,6 +11,7 @@ url: "http://collab.camp" # the base hostname & protocol for your site
 
 social:
   facebook: collabcamp
+  facebook_group: collabcamp
   twitter: collabcamps
   googleplus: collabcamp
   youtube: collabcamp
