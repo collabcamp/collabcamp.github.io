@@ -13,14 +13,49 @@ layout: default
     </section>
 
     <section id="map" class="map">
-      <!-- TODO make this a map -->
-      {% if page.locations.count > 1 %}<h2>Locations</h2>{% else %}<h2>Location</h2>{% endif %}
+      {% if page.locations.size > 1 %}<h2>Locations</h2>{% else %}<h2>Location</h2>{% endif %}
+      <div id="map-map" style="height: 300px"></div>
+      <ul class="centered-blocks">
       {% for location in page.locations %}
-        <p>
+        <li>
           <a href="{{ location.website }}">{{ location.name }}</a> at {{ location.address }}
-        </p>
+          {% if location.date %}({{ location.date }}){% endif %}
+        </li>
       {% endfor %}
+      </ul>
     </section>
   </article>
+
+  <script type="text/javascript" src="{{ site.baseurl }}/js/leaflet.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/Control.Geocoder.js"></script>
+  <script type="text/javascript"><!--
+    var map = L.map('map-map');
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var markers = [
+      {% for location in page.locations %}
+      {name: "{{ location.name }}", url: "{{ location.website }}", address: "{{ location.address }}", date: "{{ location.date }}"},
+      {% endfor %}
+    ];
+
+    var geocoder = new L.Control.Geocoder.Nominatim();
+    for (var i in markers) {
+      var marker = markers[i];
+      geocoder.geocode(marker.address, function(data) {
+        var result = data[0];
+        var marker = this;
+        var desc = "<h3><a href='"+marker.url+"'>"+marker.name+"</a></h3><div>"+marker.address+"</div>";
+        if (marker.date != "") { desc += "<div>(" + marker.date + ")</div>"; }
+        marker.ll = [result.center.lat, result.center.lng];
+        L.marker(marker.ll).bindPopup(desc).addTo(map);
+        // fit bounds to all points
+        var pts = markers.map(function(m){ return m.ll; });
+        map.fitBounds(L.latLngBounds(pts), {maxZoom: 12});
+      }.bind(marker));
+    }
+  //--></script>
 
 </div>

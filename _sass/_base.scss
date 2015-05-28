@@ -27,6 +27,14 @@ body > .container:first-child {
   background: #337AB7;
 }
 
+.centered-blocks {
+  display: block;
+  
+  & > * {
+    display: block;
+    text-align: center;
+  }
+}
 
 .site-footer {
   text-align: center;
