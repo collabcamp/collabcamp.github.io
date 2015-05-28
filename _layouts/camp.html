@@ -4,11 +4,23 @@ layout: default
 <div class="camp">
 
   <header class="camp-header">
-    <h1 class="camp-title">{{ site.title }} {{ starts }} {{ city }}</h1>
+    <h1 class="camp-title">{{ site.title }} {{ page.starts | date: '%Y' }} {{ page.city }}</h1>
   </header>
 
   <article class="camp-content">
-    {{ content }}
+    <section id="content" class="content">
+      {{ content }}
+    </section>
+
+    <section id="map" class="map">
+      <!-- TODO make this a map -->
+      {% if page.locations.count > 1 %}<h2>Locations</h2>{% else %}<h2>Location</h2>{% endif %}
+      {% for location in page.locations %}
+        <p>
+          <a href="{{ location.website }}">{{ location.name }}</a> at {{ location.address }}
+        </p>
+      {% endfor %}
+    </section>
   </article>
 
 </div>
