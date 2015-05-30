@@ -3,6 +3,13 @@ layout: default
 ---
 <div class="camp">
 
+  {% if page.fb_event %}
+  <a href="{{ page.fb_event }}" class="pull-right fb-event-box">
+    <i class="fa fa-facebook-square"></i>
+    <span id="fb-event-visit">Visit</span> this event on Facebook
+  </a>
+  {% endif %}
+
   <header class="camp-header">
     <h1 class="camp-title">{{ site.title }} {{ page.starts | date: '%Y' }} {{ page.city }}</h1>
   </header>
@@ -38,10 +45,12 @@ layout: default
 
   </article>
 
-  <!-- Find locations and create the map -->
   <script type="text/javascript" src="{{ site.baseurl }}/js/leaflet.min.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/js/Control.Geocoder.js"></script>
   <script type="text/javascript"><!--
+    //
+    // Find locations and create the map
+    //
     var map = L.map('map-map');
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -69,5 +78,13 @@ layout: default
         map.fitBounds(L.latLngBounds(pts), {maxZoom: 12});
       }.bind(marker));
     }
+
+    //
+    // Turn "visit" into "join" when the event is in the future
+    //
+    if (Date.parse("{{ page.ends | date_to_rfc822 }}") >= Date.now()) {
+      document.getElementById('fb-event-visit').innerHTML = "<strong>Join</strong>";
+    }
+
   //--></script>
 </div>
