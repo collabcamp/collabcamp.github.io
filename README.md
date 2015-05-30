@@ -10,7 +10,7 @@ To clone and run a server locally for testing:
 
     git clone https://github.com/collabcamp/collabcamp.github.io.git
     cd collabcamp.github.io
-    sudo npm install jekyll
+    npm install jekyll
     jekyll serve
 
 You should get given a server address like this:
