@@ -4,7 +4,9 @@ layout:   camp
 starts:   4 Oct 2014
 ends:     8 Oct 2014
 city:     Amsterdam
+
 fb_event: https://www.facebook.com/events/338065469676994/
+gdrive:   https://drive.google.com/open?id=0Bwdm_3hXVoz6ZmZodlRFOVppejg
 
 locations:
 - name: Knowmads

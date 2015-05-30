@@ -24,8 +24,21 @@ layout: default
       {% endfor %}
       </ul>
     </section>
+
+    {% if page.gdrive %}
+    <section id="resources" class="content resources">
+      <h2>
+        Resources
+        <span class="inline-add"><a href="{{ page.gdrive }}">(see all)</a></span>
+      </h2>
+
+      <iframe src="https://drive.google.com/embeddedfolderview?{{ page.gdrive | split:'?' | last | split:'#' | first }}#grid" style="height: 460px"></iframe>
+    </section>
+    {% endif %}
+
   </article>
 
+  <!-- Find locations and create the map -->
   <script type="text/javascript" src="{{ site.baseurl }}/js/leaflet.min.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/js/Control.Geocoder.js"></script>
   <script type="text/javascript"><!--
@@ -57,5 +70,4 @@ layout: default
       }.bind(marker));
     }
   //--></script>
-
 </div>
