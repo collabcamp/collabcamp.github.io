@@ -1,6 +1,7 @@
 # Site settings
 title: CollabCamp
 keywords: "collaboration, sharing, openness, sharing economy, hacking, making the world a better place"
+left_button: "Previous Camps"
 description: > # this means to ignore newlines until the next key
   CollabCamp events bring together social entrepreneurs, sharers, hackers,
   government officials and citizens to collaboratively work on projects which
@@ -8,6 +9,14 @@ description: > # this means to ignore newlines until the next key
   attend. We celebrate collaboration and sharing. Let's get it done!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://collab.camp" # the base hostname & protocol for your site
+
+camplinks:
+  - ams:
+    url: "camps/2014-10-amsterdam.html"
+    title: "Amsterdam 2014"
+  - par:
+    url: "camps/2015-05-paris.html"
+    title: "Paris 2015"
 
 social:
   facebook: collabcamp
@@ -22,6 +31,7 @@ hashtag: CollabCamp
 frontpage:
   video_url: "https://youtube.com/embed/TH1DUUjjuGY"
   #description: you may override the frontpage description here
+
 
 # Build settings
 markdown: kramdown

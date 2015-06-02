@@ -15,10 +15,16 @@ layout: default
     {% endif %}
   </div>
   
-  <div class="left-big-button jumbotron">
+  <div tabindex="0" class="left-big-button jumbotron">
     <i class="fa fa-arrow-down"></i>
-    Previous Camps
+    {{ site.left_button }}
     <i class="fa fa-arrow-down"></i>
+
+    <ul class="left-big-button-content">
+      {% for camp in site.camplinks %}	
+        <li><a class="btn btn-default big-text"  href="{{ camp.url }}" role="button">{{ camp.title }}</a></li>
+      {% endfor %}	
+    </ul>
   </div>
 
   <div class="col-md-2">

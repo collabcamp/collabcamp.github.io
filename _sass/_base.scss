@@ -105,10 +105,6 @@ h1, h2, h3, h4 {
   }
 }
 
-.left-big-button-container {
-  width: 1;
-  height: 1;
-}
 .left-big-button {
   font-size: 35px;
   position: absolute;
@@ -121,5 +117,42 @@ h1, h2, h3, h4 {
   -moz-transform-origin: 0% 100%;
   -o-transform-origin: 0% 100%;
   -webkit-transform-origin: 0% 100%;
+}
+
+.left-big-button:before {
+    content: "";
+}
+.left-big-button:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+}
+.left-big-button:focus .left-big-button-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+}
+.left-big-button-content {
+    list-style-type: none;
+    position: absolute;
+    z-index: 1;
+
+    /* use opacity to fake immediate toggle */
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+	
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+  -moz-transform-origin: 00% -50%;
+  -o-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+}
+
+.big-text {
+  font-size: 35px;
 }
 
