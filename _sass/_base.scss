@@ -104,3 +104,22 @@ h1, h2, h3, h4 {
     vertical-align: baseline;
   }
 }
+
+.left-big-button-container {
+  width: 1;
+  height: 1;
+}
+.left-big-button {
+  font-size: 35px;
+  position: absolute;
+  left: -20px;
+  top: 20px;
+
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+}
+
