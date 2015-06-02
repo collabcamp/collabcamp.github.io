@@ -1,7 +1,7 @@
 ---
 layout:   event
 
-title:    Collaboration Lab Camp 2014 Amsterdam
+title:    Collaboration Lab Camp Amsterdam 2014
 starts:   4 Oct 2014
 ends:     8 Oct 2014
 city:     Amsterdam
