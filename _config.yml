@@ -1,6 +1,5 @@
 # Site settings
 title: CollabCamp
-title_for_events: Collaboration Lab Camp
 keywords: "collaboration, sharing, openness, sharing economy, hacking, making the world a better place"
 description: > # this means to ignore newlines until the next key
   CollabCamp events bring together social entrepreneurs, sharers, hackers,
@@ -19,7 +18,7 @@ social:
   github: collabcamp
 hashtag: CollabCamp
 
-# Site Frontpage
+# Site frontpage
 frontpage:
   video_url: "https://youtube.com/embed/TH1DUUjjuGY"
   #description: you may override the frontpage description here
