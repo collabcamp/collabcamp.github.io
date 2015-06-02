@@ -1,5 +1,5 @@
 ---
-layout:   camp
+layout:   event
 
 starts:   4 Oct 2014
 ends:     8 Oct 2014

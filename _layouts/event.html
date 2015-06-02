@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="camp">
+<div class="event">
 
   {% if page.fb_event %}
   <a href="{{ page.fb_event }}" class="pull-right fb-event-box">
@@ -10,11 +10,11 @@ layout: default
   </a>
   {% endif %}
 
-  <header class="camp-header">
-    <h1 class="camp-title">{{ site.title_for_events }} {{ page.city }} {{ page.starts | date: '%Y' }}</h1>
+  <header class="event-header">
+    <h1 class="event-title">{{ site.title_for_events }} {{ page.city }} {{ page.starts | date: '%Y' }}</h1>
   </header>
 
-  <article class="camp-content">
+  <article class="event-content">
     <section id="content" class="content">
       {{ content }}
     </section>

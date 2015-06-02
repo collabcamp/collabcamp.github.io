@@ -8,13 +8,13 @@ CollabCamp events bring together social entrepreneurs, sharers, hackers, governm
 
 * [_config.yml](_config.yml) - general settings incl. most frontpage text
 * [index.html](index.html) - frontpage layout
-* [camps/](camps/)
-  * Each camp has its own markdown file. Properties at the top of the file
+* [events/](events/)
+  * Each event has its own markdown file. Properties at the top of the file
     are used by the page template to render a map, facebook event link, etc.
-  * To add a new camp, copy an existing one and change the details. Each file
+  * To add a new event, copy an existing one and change the details. Each file
     is named `yyyy-mm-city.md`.
 * [_layouts/default.html](_layouts/default.html) - html template used by every page
-* [_layouts/camp.html](_layouts/camp.html) - layout for camp pages
+* [_layouts/event.html](_layouts/event.html) - layout for event pages
 * [_includes/footer.html](_includes/footer.html) - footer for all pages
 * [_sass/_base.scss](_sass/_base.scss) - the site's stylesheet
 
