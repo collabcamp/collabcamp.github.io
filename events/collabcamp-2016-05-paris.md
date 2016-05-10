@@ -7,7 +7,7 @@ ends:     17 May 2016
 city:     Paris
 
 fb_event: https://www.facebook.com/events/747763475367071/
-gdrive:   https://drive.google.com/folderview?id=0BxdLEgQI2gQBb2RMb2RJMC02Y3c
+gdrive:   https://drive.google.com/open?id=0B0JFhAj5r4jTZS1rMGRFTkNRblk
 
 locations:
 - name: Maison des Acteurs du Paris Durable
