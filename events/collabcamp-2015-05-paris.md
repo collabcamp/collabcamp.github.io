@@ -1,7 +1,7 @@
 ---
 layout:   event
 
-title:    Collaboration Lab Camp Paris 2015
+title:    CollabCamp Paris 2015
 starts:   22 May 2015
 ends:     25 May 2015
 city:     Paris
