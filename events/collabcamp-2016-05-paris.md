@@ -16,7 +16,7 @@ locations:
   date: 13, 17 May 2016
 - name: Les Grands Voisins
   website: http://lesgrandsvoisins.org/lesite/pratique
-  address: Ancien hôpital Saint-Vincent-de-Paul, 82 Avenue Denfert-Rochereau, 75014 Paris, France
+  address: 82 Avenue Denfert-Rochereau, 75014 Paris, France
   date: 14, 15, 16 May 2016
 ---
 
